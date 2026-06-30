@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BCA Career Guide & Learning Roadmaps</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="top-nav">
+        <div class="logo">
+          <span class="logo-icon">🎓</span>
+          <span>BCA Career Guide</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#recommend">Recommend</a>
+          <a href="#paths">Career Paths</a>
+          <a href="#roadmaps">Roadmaps</a>
+          <a href="#tracker">Progress</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="home">
+          <div class="hero-copy">
+            <p class="eyebrow">BCA Career Navigation</p>
+            <h1>Choose the right technology path and learn step by step.</h1>
+            <p class="hero-text">
+              Explore career paths for BCA students with clear learning roadmaps,
+              trusted platforms, and job outcomes. Track your progress as you move
+              from beginner to professional.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#paths">Explore Paths</a>
+              <a class="btn btn-secondary" href="#tracker">Start Tracking</a>
+            </div>
+          </div>
+          <div class="hero-card" aria-label="Career path snapshot">
+            <div class="hero-stat">
+              <span>15+</span>
+              <small>Career Pathways</small>
+            </div>
+            <div class="hero-stat">
+              <span>100%</span>
+              <small>Beginner Friendly</small>
+            </div>
+            <div class="hero-stat">
+              <span>Step-by-step</span>
+              <small>Learning Roadmaps</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="recommend">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Path Finder</p>
+              <h2>Find the best path for you</h2>
+            </div>
+          </div>
+          <div class="quiz-card" aria-label="Career recommendation quiz">
+            <div class="quiz-field">
+              <label for="interestSelect">1. Which area interests you the most?</label>
+              <select id="interestSelect">
+                <option value="web">Building websites and apps</option>
+                <option value="mobile">Creating mobile applications</option>
+                <option value="data">Working with data and analytics</option>
+                <option value="cloud">Cloud, servers, and automation</option>
+                <option value="security">Security and ethical hacking</option>
+                <option value="design">Designing user interfaces</option>
+                <option value="games">Making games</option>
+              </select>
+            </div>
+
+            <div class="quiz-field">
+              <label for="workStyleSelect">2. What kind of work do you enjoy most?</label>
+              <select id="workStyleSelect">
+                <option value="creative">Creative and design-focused</option>
+                <option value="problem">Problem-solving and coding</option>
+                <option value="analysis">Analyzing data and reports</option>
+                <option value="systems">Managing systems and cloud tools</option>
+                <option value="testing">Finding bugs and improving quality</option>
+              </select>
+            </div>
+
+            <div class="quiz-field">
+              <label for="goalSelect">3. What do you want to achieve first?</label>
+              <select id="goalSelect">
+                <option value="job">Get a job quickly</option>
+                <option value="portfolio">Build a strong portfolio</option>
+                <option value="startup">Work on startups or freelance projects</option>
+                <option value="research">Work in AI, analytics, or research</option>
+                <option value="security">Secure systems and networks</option>
+              </select>
+            </div>
+
+            <button id="recommendButton" class="btn btn-primary" type="button">Get Recommendation</button>
+            <div id="recommendationResult" class="recommendation-result" hidden></div>
+          </div>
+        </section>
+
+        <section class="section" id="paths">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Career Paths</p>
+              <h2>Choose a path that matches your interests</h2>
+            </div>
+          </div>
+          <div class="career-grid" id="careerGrid" aria-label="Career paths"></div>
+        </section>
+
+        <section class="section alt-section" id="roadmaps">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Learning Roadmap</p>
+              <h2>Step-by-step learning plan</h2>
+            </div>
+          </div>
+          <div class="roadmap-panel" id="roadmapPanel" aria-live="polite"></div>
+        </section>
+
+        <section class="section" id="tracker">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Personal Progress</p>
+              <h2>Track what you have learned</h2>
+            </div>
+          </div>
+          <div class="tracker-layout">
+            <div class="tracker-card">
+              <div class="tracker-controls">
+                <select id="careerSelect" aria-label="Select a career path"></select>
+                <button id="resetProgress" class="btn btn-ghost" type="button">
+                  Reset Progress
+                </button>
+              </div>
+
+              <div class="progress-summary">
+                <div class="progress-header">
+                  <span>Learning Progress</span>
+                  <strong id="progressLabel">0%</strong>
+                </div>
+                <div class="progress-bar" aria-hidden="true">
+                  <span id="progressFill"></span>
+                </div>
+              </div>
+
+              <ul id="stepList" class="step-list" aria-label="Learning steps"></ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
